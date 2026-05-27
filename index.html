@@ -1,284 +1,531 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: left; font: 13.0px 'Geeza Pro'}
-    span.s1 {font: 13.0px 'Helvetica Neue'}
-  </style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Darham Gold</title>
+
+
+
+<style>
+
+body{
+
+    margin:0;
+
+    font-family:Arial,sans-serif;
+
+    background:#f5f5f5;
+
+    color:#222;
+
+}
+
+
+
+.container{
+
+    max-width:500px;
+
+    margin:auto;
+
+    padding:20px;
+
+}
+
+
+
+.card{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+
+
+h1,h2,h3{
+
+    text-align:center;
+
+}
+
+
+
+input,select,button{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:10px;
+
+    border-radius:12px;
+
+    border:1px solid #ccc;
+
+    box-sizing:border-box;
+
+    font-size:16px;
+
+}
+
+
+
+button{
+
+    background:#c8a74e;
+
+    color:white;
+
+    border:none;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+
+.result{
+
+    background:#f8f3df;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    margin-top:10px;
+
+    font-weight:bold;
+
+}
+
+
+
+.lang-btn{
+
+    background:#222;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.small{
+
+    text-align:center;
+
+    color:#666;
+
+}
+
+</style>
+
 </head>
+
+
+
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1">&lt;title&gt;Darham Gold&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">body{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-family:Arial,sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#f5f5f5;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:#222;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.container{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>max-width:500px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.card{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-shadow:0 4px 15px rgba(0,0,0,0.08);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">h1,h2,h3{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">input,select,button{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:14px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top:10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>box-sizing:border-box;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">button{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#c8a74e;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border:none;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight:bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.result{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#f8f3df;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>padding:12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>border-radius:12px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-top:10px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>font-weight:bold;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.lang-btn{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>background:#222;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:15px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.small{</p>
-<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>color:#666;</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;button class="lang-btn" onclick="toggleLanguage()" id="langBtn"&gt;</p>
-<p dir="rtl" class="p3">العربية</p>
-<p class="p1">&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="card"&gt;</p>
-<p class="p1">&lt;h1&gt;Darham Gold&lt;/h1&gt;</p>
-<p class="p1">&lt;p class="small" id="subtitle"&gt;UAE Gold Calculator&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h3 id="ounceTitle"&gt;Global Gold Ounce Price&lt;/h3&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;input type="number" id="ounce" placeholder="Update Global Price"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;input type="number" id="usd" value="3.6725"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="result" id="prices"&gt;</p>
-<p class="p1">Waiting for prices...</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="card"&gt;</p>
-<p class="p1">&lt;h2 id="normalTitle"&gt;Normal Calculation&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;input type="number" id="weight" placeholder="Gold Weight in Grams"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;select id="karat"&gt;</p>
-<p class="p1">&lt;option value="24"&gt;24K&lt;/option&gt;</p>
-<p class="p1">&lt;option value="22"&gt;22K&lt;/option&gt;</p>
-<p class="p1">&lt;option value="21"&gt;21K&lt;/option&gt;</p>
-<p class="p1">&lt;option value="18"&gt;18K&lt;/option&gt;</p>
-<p class="p1">&lt;/select&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;input type="number" id="making" placeholder="Making Charge per Gram"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;button onclick="calculatePrice()" id="calcBtn"&gt;</p>
-<p class="p1">Calculate Final Price</p>
-<p class="p1">&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="result" id="finalResult"&gt;</p>
-<p class="p1">Waiting for calculation...</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="card"&gt;</p>
-<p class="p1">&lt;h2 id="reverseTitle"&gt;Reverse Making Charge Calculator&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;input type="number" id="reverseWeight" placeholder="Gold Weight in Grams"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;select id="reverseKarat"&gt;</p>
-<p class="p1">&lt;option value="24"&gt;24K&lt;/option&gt;</p>
-<p class="p1">&lt;option value="22"&gt;22K&lt;/option&gt;</p>
-<p class="p1">&lt;option value="21"&gt;21K&lt;/option&gt;</p>
-<p class="p1">&lt;option value="18"&gt;18K&lt;/option&gt;</p>
-<p class="p1">&lt;/select&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;input type="number" id="totalPrice" placeholder="Total Price with VAT"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;button onclick="calculateReverse()" id="reverseBtn"&gt;</p>
-<p class="p1">Calculate Making Charge</p>
-<p class="p1">&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="result" id="reverseResult"&gt;</p>
-<p class="p1">Waiting for calculation...</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">let currentLang = "en";</p>
-<p class="p2"><br></p>
-<p class="p1">function gramPrice(karat){</p>
-<p class="p2"><br></p>
-<p class="p1">let ounce =</p>
-<p class="p1">parseFloat(document.getElementById("ounce").value) || 0;</p>
-<p class="p2"><br></p>
-<p class="p1">let usd =</p>
-<p class="p1">parseFloat(document.getElementById("usd").value) || 3.6725;</p>
-<p class="p2"><br></p>
-<p class="p1">let gram24 = (ounce / 31.1035) * usd;</p>
-<p class="p2"><br></p>
-<p class="p1">return gram24 * (karat / 24);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function updatePrices(){</p>
-<p class="p2"><br></p>
-<p class="p1">let html = "";</p>
-<p class="p2"><br></p>
-<p class="p1">[24,22,21,18].forEach(k=&gt;{</p>
-<p class="p2"><br></p>
-<p class="p1">html += `</p>
-<p class="p1">&lt;div&gt;</p>
-<p class="p1">${k}K : ${gramPrice(k).toFixed(2)} AED</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p1">`;</p>
-<p class="p2"><br></p>
-<p class="p1">});</p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("prices").innerHTML = html;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function calculatePrice(){</p>
-<p class="p2"><br></p>
-<p class="p1">let weight =</p>
-<p class="p1">parseFloat(document.getElementById("weight").value) || 0;</p>
-<p class="p2"><br></p>
-<p class="p1">let karat =</p>
-<p class="p1">parseFloat(document.getElementById("karat").value);</p>
-<p class="p2"><br></p>
-<p class="p1">let making =</p>
-<p class="p1">parseFloat(document.getElementById("making").value) || 0;</p>
-<p class="p2"><br></p>
-<p class="p1">let gold = gramPrice(karat);</p>
-<p class="p2"><br></p>
-<p class="p1">let subtotal = (gold + making) * weight;</p>
-<p class="p2"><br></p>
-<p class="p1">let final = subtotal * 1.05;</p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("finalResult").innerHTML =</p>
-<p class="p1">`Final Price: ${final.toFixed(2)} AED`;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">function calculateReverse(){</p>
-<p class="p2"><br></p>
-<p class="p1">let weight =</p>
-<p class="p1">parseFloat(document.getElementById("reverseWeight").value) || 0;</p>
-<p class="p2"><br></p>
-<p class="p1">let karat =</p>
-<p class="p1">parseFloat(document.getElementById("reverseKarat").value);</p>
-<p class="p2"><br></p>
-<p class="p1">let total =</p>
-<p class="p1">parseFloat(document.getElementById("totalPrice").value) || 0;</p>
-<p class="p2"><br></p>
-<p class="p1">let beforeVat = total / 1.05;</p>
-<p class="p2"><br></p>
-<p class="p1">let goldOnly = gramPrice(karat) * weight;</p>
-<p class="p2"><br></p>
-<p class="p1">let makingTotal = beforeVat - goldOnly;</p>
-<p class="p2"><br></p>
-<p class="p1">let makingGram = makingTotal / weight;</p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("reverseResult").innerHTML =</p>
-<p class="p1">`Making Charge: ${makingGram.toFixed(2)} AED per gram`;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("ounce").addEventListener("input",updatePrices);</p>
-<p class="p2"><br></p>
-<p class="p1">function toggleLanguage(){</p>
-<p class="p2"><br></p>
-<p class="p1">if(currentLang==="en"){</p>
-<p class="p2"><br></p>
-<p class="p1">currentLang="ar";</p>
-<p class="p2"><br></p>
-<p class="p1">document.documentElement.lang="ar";</p>
-<p class="p1">document.body.style.direction="rtl";</p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("subtitle").innerText =</p>
-<p dir="rtl" class="p3"><span class="s1">"</span>حاسبة<span class="s1"> </span>الذهب<span class="s1"> </span>الإماراتية<span class="s1"> </span>الكاملة<span class="s1">";</span></p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("ounceTitle").innerText =</p>
-<p dir="rtl" class="p3"><span class="s1">"</span>سعر<span class="s1"> </span>الأونصة<span class="s1"> </span>العالمي<span class="s1">";</span></p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("normalTitle").innerText =</p>
-<p dir="rtl" class="p3"><span class="s1">"</span>الحساب<span class="s1"> </span>العادي<span class="s1">";</span></p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("reverseTitle").innerText =</p>
-<p dir="rtl" class="p3"><span class="s1">"</span>الحساب<span class="s1"> </span>العكسي<span class="s1"> </span>للمصنعية<span class="s1">";</span></p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("calcBtn").innerText =</p>
-<p dir="rtl" class="p3"><span class="s1">"</span>احسب<span class="s1"> </span>السعر<span class="s1"> </span>النهائي<span class="s1">";</span></p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("reverseBtn").innerText =</p>
-<p dir="rtl" class="p3"><span class="s1">"</span>احسب<span class="s1"> </span>المصنعية<span class="s1">";</span></p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("langBtn").innerText =</p>
-<p class="p1">"English";</p>
-<p class="p2"><br></p>
-<p class="p1">}else{</p>
-<p class="p2"><br></p>
-<p class="p1">currentLang="en";</p>
-<p class="p2"><br></p>
-<p class="p1">location.reload();</p>
-<p class="p2"><br></p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+
+
+<div class="container">
+
+
+
+<button class="lang-btn" onclick="toggleLanguage()" id="langBtn">
+
+العربية
+
+</button>
+
+
+
+<div class="card">
+
+<h1>Darham Gold</h1>
+
+<p class="small" id="subtitle">UAE Gold Calculator</p>
+
+
+
+<h3 id="ounceTitle">Global Gold Ounce Price</h3>
+
+
+
+<input type="number" id="ounce" placeholder="Update Global Price">
+
+
+
+<input type="number" id="usd" value="3.6725">
+
+
+
+<div class="result" id="prices">
+
+Waiting for prices...
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2 id="normalTitle">Normal Calculation</h2>
+
+
+
+<input type="number" id="weight" placeholder="Gold Weight in Grams">
+
+
+
+<select id="karat">
+
+<option value="24">24K</option>
+
+<option value="22">22K</option>
+
+<option value="21">21K</option>
+
+<option value="18">18K</option>
+
+</select>
+
+
+
+<input type="number" id="making" placeholder="Making Charge per Gram">
+
+
+
+<button onclick="calculatePrice()" id="calcBtn">
+
+Calculate Final Price
+
+</button>
+
+
+
+<div class="result" id="finalResult">
+
+Waiting for calculation...
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h2 id="reverseTitle">Reverse Making Charge Calculator</h2>
+
+
+
+<input type="number" id="reverseWeight" placeholder="Gold Weight in Grams">
+
+
+
+<select id="reverseKarat">
+
+<option value="24">24K</option>
+
+<option value="22">22K</option>
+
+<option value="21">21K</option>
+
+<option value="18">18K</option>
+
+</select>
+
+
+
+<input type="number" id="totalPrice" placeholder="Total Price with VAT">
+
+
+
+<button onclick="calculateReverse()" id="reverseBtn">
+
+Calculate Making Charge
+
+</button>
+
+
+
+<div class="result" id="reverseResult">
+
+Waiting for calculation...
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+<script>
+
+
+
+let currentLang = "en";
+
+
+
+function gramPrice(karat){
+
+
+
+let ounce =
+
+parseFloat(document.getElementById("ounce").value) || 0;
+
+
+
+let usd =
+
+parseFloat(document.getElementById("usd").value) || 3.6725;
+
+
+
+let gram24 = (ounce / 31.1035) * usd;
+
+
+
+return gram24 * (karat / 24);
+
+}
+
+
+
+function updatePrices(){
+
+
+
+let html = "";
+
+
+
+[24,22,21,18].forEach(k=>{
+
+
+
+html += `
+
+<div>
+
+${k}K : ${gramPrice(k).toFixed(2)} AED
+
+</div>
+
+`;
+
+
+
+});
+
+
+
+document.getElementById("prices").innerHTML = html;
+
+}
+
+
+
+function calculatePrice(){
+
+
+
+let weight =
+
+parseFloat(document.getElementById("weight").value) || 0;
+
+
+
+let karat =
+
+parseFloat(document.getElementById("karat").value);
+
+
+
+let making =
+
+parseFloat(document.getElementById("making").value) || 0;
+
+
+
+let gold = gramPrice(karat);
+
+
+
+let subtotal = (gold + making) * weight;
+
+
+
+let final = subtotal * 1.05;
+
+
+
+document.getElementById("finalResult").innerHTML =
+
+`Final Price: ${final.toFixed(2)} AED`;
+
+}
+
+
+
+function calculateReverse(){
+
+
+
+let weight =
+
+parseFloat(document.getElementById("reverseWeight").value) || 0;
+
+
+
+let karat =
+
+parseFloat(document.getElementById("reverseKarat").value);
+
+
+
+let total =
+
+parseFloat(document.getElementById("totalPrice").value) || 0;
+
+
+
+let beforeVat = total / 1.05;
+
+
+
+let goldOnly = gramPrice(karat) * weight;
+
+
+
+let makingTotal = beforeVat - goldOnly;
+
+
+
+let makingGram = makingTotal / weight;
+
+
+
+document.getElementById("reverseResult").innerHTML =
+
+`Making Charge: ${makingGram.toFixed(2)} AED per gram`;
+
+}
+
+
+
+document.getElementById("ounce").addEventListener("input",updatePrices);
+
+
+
+function toggleLanguage(){
+
+
+
+if(currentLang==="en"){
+
+
+
+currentLang="ar";
+
+
+
+document.documentElement.lang="ar";
+
+document.body.style.direction="rtl";
+
+
+
+document.getElementById("subtitle").innerText =
+
+"حاسبة الذهب الإماراتية الكاملة";
+
+
+
+document.getElementById("ounceTitle").innerText =
+
+"سعر الأونصة العالمي";
+
+
+
+document.getElementById("normalTitle").innerText =
+
+"الحساب العادي";
+
+
+
+document.getElementById("reverseTitle").innerText =
+
+"الحساب العكسي للمصنعية";
+
+
+
+document.getElementById("calcBtn").innerText =
+
+"احسب السعر النهائي";
+
+
+
+document.getElementById("reverseBtn").innerText =
+
+"احسب المصنعية";
+
+
+
+document.getElementById("langBtn").innerText =
+
+"English";
+
+
+
+}else{
+
+
+
+currentLang="en";
+
+
+
+location.reload();
+
+
+
+}
+
+
+
+}
+
+
+
+</script>
+
+
+
 </body>
+
 </html>
