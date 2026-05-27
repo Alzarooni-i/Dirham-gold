@@ -7,267 +7,277 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2113.65">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Geeza Pro'}
-    span.s1 {font: 12.0px 'Geeza Pro'}
-    span.s2 {font: 12.0px Helvetica}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: left; font: 13.0px 'Geeza Pro'}
+    span.s1 {font: 13.0px 'Helvetica Neue'}
   </style>
 </head>
 <body>
 <p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ar" dir="rtl"&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
 <p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Darham Gold&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #f7f2e8;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.app {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>max-width: 480px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin: auto;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 14px rgba(0,0,0,0.08);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #b8860b;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 5px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h2 {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #333;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>input, select, button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>box-sizing: border-box;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #b8860b;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.row {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #fff6d8;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.small {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>color: #777;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>font-size: 13px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.lang {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>background: #222;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 15px;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Darham Gold&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">body{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-family:Arial,sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:#f5f5f5;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#222;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.container{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>max-width:500px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin:auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:20px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.card{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:20px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-shadow:0 4px 15px rgba(0,0,0,0.08);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">h1,h2,h3{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">input,select,button{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>width:100%;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box-sizing:border-box;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-size:16px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">button{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:#c8a74e;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:white;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border:none;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:bold;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>cursor:pointer;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.result{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:#f8f3df;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>padding:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>border-radius:12px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-top:10px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>font-weight:bold;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.lang-btn{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>background:#222;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>margin-bottom:15px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.small{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>text-align:center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>color:#666;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
 <p class="p1">&lt;/head&gt;</p>
 <p class="p2"><br></p>
 <p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="app"&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;button class="lang" onclick="toggleLanguage()" id="langBtn"&gt;English&lt;/button&gt;</p>
+<p class="p1">&lt;div class="container"&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Darham Gold&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="small" id="subtitle"&gt;<span class="s1">حاسبة</span> <span class="s1">الذهب</span> <span class="s1">الإماراتية</span> <span class="s1">الكاملة</span>&lt;/p&gt;</p>
+<p class="p1">&lt;button class="lang-btn" onclick="toggleLanguage()" id="langBtn"&gt;</p>
+<p dir="rtl" class="p3">العربية</p>
+<p class="p1">&lt;/button&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 id="globalTitle"&gt;<span class="s1">سعر</span> <span class="s1">الأونصة</span> <span class="s1">العالمي</span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input id="ounce" type="number" placeholder="<span class="s1">تحديث</span> <span class="s1">السعر</span> <span class="s1">العالمي</span>" oninput="updatePrices()" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input id="usd" type="number" value="3.678" placeholder="<span class="s1">سعر</span> <span class="s1">الدولار</span> <span class="s1">مقابل</span> <span class="s1">الدرهم</span>" oninput="updatePrices()" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="small" id="readyText"&gt;<span class="s1">جاهز</span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1">&lt;h1&gt;Darham Gold&lt;/h1&gt;</p>
+<p class="p1">&lt;p class="small" id="subtitle"&gt;UAE Gold Calculator&lt;/p&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 id="gramTitle"&gt;<span class="s1">أسعار</span> <span class="s1">الجرام</span> <span class="s1">حسب</span> <span class="s1">العيار</span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="prices"&gt;<span class="s1">بانتظار</span> <span class="s1">الأسعار</span>...&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;h3 id="ounceTitle"&gt;Global Gold Ounce Price&lt;/h3&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 id="normalTitle"&gt;<span class="s1">الحساب</span> <span class="s1">العادي</span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input id="weight" type="number" placeholder="<span class="s1">وزن</span> <span class="s1">الذهب</span> <span class="s1">بالجرام</span>" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;select id="karat"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="24"&gt;24&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="22"&gt;22&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="21" selected&gt;21&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="18"&gt;18&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input id="making" type="number" placeholder="<span class="s1">المصنعية</span> <span class="s1">لكل</span> <span class="s1">جرام</span> (<span class="s1">اختياري</span>)" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="normalCalc()" id="normalBtn"&gt;<span class="s1">احسب</span> <span class="s1">السعر</span> <span class="s1">النهائي</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="normalResult"&gt;<span class="s1">بانتظار</span> <span class="s1">الحساب</span>...&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;input type="number" id="ounce" placeholder="Update Global Price"&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;h2 id="reverseTitle"&gt;<span class="s1">الحساب</span> <span class="s1">العكسي</span> <span class="s1">للمصنعية</span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input id="rWeight" type="number" placeholder="<span class="s1">وزن</span> <span class="s1">الذهب</span> <span class="s1">بالجرام</span>" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;select id="rKarat"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="24"&gt;24&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="22"&gt;22&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="21" selected&gt;21&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;option value="18"&gt;18&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/select&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;input id="total" type="number" placeholder="<span class="s1">السعر</span> <span class="s1">الإجمالي</span> <span class="s1">شامل</span> <span class="s1">الضريبة</span>" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="reverseCalc()" id="reverseBtn"&gt;<span class="s1">احسب</span> <span class="s1">المصنعية</span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p id="reverseResult"&gt;<span class="s1">بانتظار</span> <span class="s1">الحساب</span>...&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;input type="number" id="usd" value="3.6725"&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;div class="result" id="prices"&gt;</p>
+<p class="p1">Waiting for prices...</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1">&lt;h2 id="normalTitle"&gt;Normal Calculation&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;input type="number" id="weight" placeholder="Gold Weight in Grams"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;select id="karat"&gt;</p>
+<p class="p1">&lt;option value="24"&gt;24K&lt;/option&gt;</p>
+<p class="p1">&lt;option value="22"&gt;22K&lt;/option&gt;</p>
+<p class="p1">&lt;option value="21"&gt;21K&lt;/option&gt;</p>
+<p class="p1">&lt;option value="18"&gt;18K&lt;/option&gt;</p>
+<p class="p1">&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;input type="number" id="making" placeholder="Making Charge per Gram"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button onclick="calculatePrice()" id="calcBtn"&gt;</p>
+<p class="p1">Calculate Final Price</p>
+<p class="p1">&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="result" id="finalResult"&gt;</p>
+<p class="p1">Waiting for calculation...</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="card"&gt;</p>
+<p class="p1">&lt;h2 id="reverseTitle"&gt;Reverse Making Charge Calculator&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;input type="number" id="reverseWeight" placeholder="Gold Weight in Grams"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;select id="reverseKarat"&gt;</p>
+<p class="p1">&lt;option value="24"&gt;24K&lt;/option&gt;</p>
+<p class="p1">&lt;option value="22"&gt;22K&lt;/option&gt;</p>
+<p class="p1">&lt;option value="21"&gt;21K&lt;/option&gt;</p>
+<p class="p1">&lt;option value="18"&gt;18K&lt;/option&gt;</p>
+<p class="p1">&lt;/select&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;input type="number" id="totalPrice" placeholder="Total Price with VAT"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button onclick="calculateReverse()" id="reverseBtn"&gt;</p>
+<p class="p1">Calculate Making Charge</p>
+<p class="p1">&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="result" id="reverseResult"&gt;</p>
+<p class="p1">Waiting for calculation...</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
 <p class="p2"><br></p>
 <p class="p1">&lt;script&gt;</p>
-<p class="p1">let lang = "ar";</p>
 <p class="p2"><br></p>
-<p class="p1">const text = {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>ar: {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>dir: "rtl",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>btn: "English",</p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span>subtitle: "</span>حاسبة<span class="s2"> </span>الذهب<span class="s2"> </span>الإماراتية<span class="s2"> </span>الكاملة<span class="s2">",</span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>globalTitle: "<span class="s1">سعر</span> <span class="s1">الأونصة</span> <span class="s1">العالمي</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>ouncePH: "<span class="s1">تحديث</span> <span class="s1">السعر</span> <span class="s1">العالمي</span>",</p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span>usdPH: "</span>سعر<span class="s2"> </span>الدولار<span class="s2"> </span>مقابل<span class="s2"> </span>الدرهم<span class="s2">",</span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>ready: "<span class="s1">جاهز</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gramTitle: "<span class="s1">أسعار</span> <span class="s1">الجرام</span> <span class="s1">حسب</span> <span class="s1">العيار</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>waitingPrices: "<span class="s1">بانتظار</span> <span class="s1">الأسعار</span>...",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>normalTitle: "<span class="s1">الحساب</span> <span class="s1">العادي</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>weightPH: "<span class="s1">وزن</span> <span class="s1">الذهب</span> <span class="s1">بالجرام</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>makingPH: "<span class="s1">المصنعية</span> <span class="s1">لكل</span> <span class="s1">جرام</span> (<span class="s1">اختياري</span>)",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>normalBtn: "<span class="s1">احسب</span> <span class="s1">السعر</span> <span class="s1">النهائي</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>waitingCalc: "<span class="s1">بانتظار</span> <span class="s1">الحساب</span>...",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>reverseTitle: "<span class="s1">الحساب</span> <span class="s1">العكسي</span> <span class="s1">للمصنعية</span>",</p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span>totalPH: "</span>السعر<span class="s2"> </span>الإجمالي<span class="s2"> </span>شامل<span class="s2"> </span>الضريبة<span class="s2">",</span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>reverseBtn: "<span class="s1">احسب</span> <span class="s1">المصنعية</span>",</p>
-<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span>final: "</span>السعر<span class="s2"> </span>النهائي<span class="s2"> </span>شامل<span class="s2"> </span>الضريبة<span class="s2">",</span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>making: "<span class="s1">المصنعية</span> <span class="s1">لكل</span> <span class="s1">جرام</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aed: "<span class="s1">درهم</span>"</p>
-<p class="p1"><span class="Apple-converted-space">  </span>},</p>
-<p class="p1"><span class="Apple-converted-space">  </span>en: {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>dir: "ltr",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>btn: "<span class="s1">العربية</span>",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>subtitle: "UAE Gold Calculator",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>globalTitle: "Global Gold Ounce Price",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>ouncePH: "Update global price",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>usdPH: "USD to AED rate",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>ready: "Ready",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>gramTitle: "Gram Prices by Karat",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>waitingPrices: "Waiting for prices...",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>normalTitle: "Normal Calculation",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>weightPH: "Gold weight in grams",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>makingPH: "Making charge per gram (optional)",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>normalBtn: "Calculate Final Price",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>waitingCalc: "Waiting for calculation...",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>reverseTitle: "Reverse Making Charge Calculation",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>totalPH: "Total price including VAT",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>reverseBtn: "Calculate Making Charge",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>final: "Final price including VAT",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>making: "Making charge per gram",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>aed: "AED"</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">};</p>
+<p class="p1">let currentLang = "en";</p>
 <p class="p2"><br></p>
-<p class="p1">function t(key){ return text[lang][key]; }</p>
+<p class="p1">function gramPrice(karat){</p>
 <p class="p2"><br></p>
-<p class="p1">function toggleLanguage() {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>lang = lang === "ar" ? "en" : "ar";</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.documentElement.lang = lang;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.documentElement.dir = t("dir");</p>
+<p class="p1">let ounce =</p>
+<p class="p1">parseFloat(document.getElementById("ounce").value) || 0;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("langBtn").innerText = t("btn");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("subtitle").innerText = t("subtitle");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("globalTitle").innerText = t("globalTitle");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("ounce").placeholder = t("ouncePH");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("usd").placeholder = t("usdPH");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("readyText").innerText = t("ready");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("gramTitle").innerText = t("gramTitle");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("normalTitle").innerText = t("normalTitle");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("weight").placeholder = t("weightPH");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("making").placeholder = t("makingPH");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("normalBtn").innerText = t("normalBtn");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("reverseTitle").innerText = t("reverseTitle");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("rWeight").placeholder = t("weightPH");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("total").placeholder = t("totalPH");</p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("reverseBtn").innerText = t("reverseBtn");</p>
+<p class="p1">let usd =</p>
+<p class="p1">parseFloat(document.getElementById("usd").value) || 3.6725;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>updatePrices();</p>
+<p class="p1">let gram24 = (ounce / 31.1035) * usd;</p>
+<p class="p2"><br></p>
+<p class="p1">return gram24 * (karat / 24);</p>
 <p class="p1">}</p>
 <p class="p2"><br></p>
-<p class="p1">function getGramPrice(k) {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const ounce = parseFloat(document.getElementById("ounce").value) || 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const usd = parseFloat(document.getElementById("usd").value) || 3.678;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const gram24 = (ounce / 31.1035) * usd;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>return gram24 * (k / 24);</p>
+<p class="p1">function updatePrices(){</p>
+<p class="p2"><br></p>
+<p class="p1">let html = "";</p>
+<p class="p2"><br></p>
+<p class="p1">[24,22,21,18].forEach(k=&gt;{</p>
+<p class="p2"><br></p>
+<p class="p1">html += `</p>
+<p class="p1">&lt;div&gt;</p>
+<p class="p1">${k}K : ${gramPrice(k).toFixed(2)} AED</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p1">`;</p>
+<p class="p2"><br></p>
+<p class="p1">});</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("prices").innerHTML = html;</p>
 <p class="p1">}</p>
 <p class="p2"><br></p>
-<p class="p1">function updatePrices() {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const ounce = document.getElementById("ounce").value;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const prices = document.getElementById("prices");</p>
+<p class="p1">function calculatePrice(){</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>if (!ounce) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>prices.innerText = t("waitingPrices");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">let weight =</p>
+<p class="p1">parseFloat(document.getElementById("weight").value) || 0;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>prices.innerHTML = "";</p>
-<p class="p1"><span class="Apple-converted-space">  </span>[24,22,21,18].forEach(k =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>prices.innerHTML += `</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="row"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;${k}K&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span&gt;${getGramPrice(k).toFixed(2)} ${t("aed")}&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">let karat =</p>
+<p class="p1">parseFloat(document.getElementById("karat").value);</p>
+<p class="p2"><br></p>
+<p class="p1">let making =</p>
+<p class="p1">parseFloat(document.getElementById("making").value) || 0;</p>
+<p class="p2"><br></p>
+<p class="p1">let gold = gramPrice(karat);</p>
+<p class="p2"><br></p>
+<p class="p1">let subtotal = (gold + making) * weight;</p>
+<p class="p2"><br></p>
+<p class="p1">let final = subtotal * 1.05;</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("finalResult").innerHTML =</p>
+<p class="p1">`Final Price: ${final.toFixed(2)} AED`;</p>
 <p class="p1">}</p>
 <p class="p2"><br></p>
-<p class="p1">function normalCalc() {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const weight = parseFloat(document.getElementById("weight").value) || 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const karat = parseFloat(document.getElementById("karat").value);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const making = parseFloat(document.getElementById("making").value) || 0;</p>
+<p class="p1">function calculateReverse(){</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>const total = ((getGramPrice(karat) + making) * weight) * 1.05;</p>
+<p class="p1">let weight =</p>
+<p class="p1">parseFloat(document.getElementById("reverseWeight").value) || 0;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("normalResult").innerText =</p>
-<p class="p1"><span class="Apple-converted-space">    </span>`${t("final")}: ${total.toFixed(2)} ${t("aed")}`;</p>
+<p class="p1">let karat =</p>
+<p class="p1">parseFloat(document.getElementById("reverseKarat").value);</p>
+<p class="p2"><br></p>
+<p class="p1">let total =</p>
+<p class="p1">parseFloat(document.getElementById("totalPrice").value) || 0;</p>
+<p class="p2"><br></p>
+<p class="p1">let beforeVat = total / 1.05;</p>
+<p class="p2"><br></p>
+<p class="p1">let goldOnly = gramPrice(karat) * weight;</p>
+<p class="p2"><br></p>
+<p class="p1">let makingTotal = beforeVat - goldOnly;</p>
+<p class="p2"><br></p>
+<p class="p1">let makingGram = makingTotal / weight;</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("reverseResult").innerHTML =</p>
+<p class="p1">`Making Charge: ${makingGram.toFixed(2)} AED per gram`;</p>
 <p class="p1">}</p>
 <p class="p2"><br></p>
-<p class="p1">function reverseCalc() {</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const weight = parseFloat(document.getElementById("rWeight").value) || 0;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const karat = parseFloat(document.getElementById("rKarat").value);</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const total = parseFloat(document.getElementById("total").value) || 0;</p>
+<p class="p1">document.getElementById("ounce").addEventListener("input",updatePrices);</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>if (weight &lt;= 0) {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById("reverseResult").innerText = t("waitingCalc");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1">function toggleLanguage(){</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>const beforeVAT = total / 1.05;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const goldOnly = getGramPrice(karat) * weight;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const makingPerGram = (beforeVAT - goldOnly) / weight;</p>
+<p class="p1">if(currentLang==="en"){</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("reverseResult").innerText =</p>
-<p class="p1"><span class="Apple-converted-space">    </span>`${t("making")}: ${makingPerGram.toFixed(2)} ${t("aed")}`;</p>
+<p class="p1">currentLang="ar";</p>
+<p class="p2"><br></p>
+<p class="p1">document.documentElement.lang="ar";</p>
+<p class="p1">document.body.style.direction="rtl";</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("subtitle").innerText =</p>
+<p dir="rtl" class="p3"><span class="s1">"</span>حاسبة<span class="s1"> </span>الذهب<span class="s1"> </span>الإماراتية<span class="s1"> </span>الكاملة<span class="s1">";</span></p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("ounceTitle").innerText =</p>
+<p dir="rtl" class="p3"><span class="s1">"</span>سعر<span class="s1"> </span>الأونصة<span class="s1"> </span>العالمي<span class="s1">";</span></p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("normalTitle").innerText =</p>
+<p dir="rtl" class="p3"><span class="s1">"</span>الحساب<span class="s1"> </span>العادي<span class="s1">";</span></p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("reverseTitle").innerText =</p>
+<p dir="rtl" class="p3"><span class="s1">"</span>الحساب<span class="s1"> </span>العكسي<span class="s1"> </span>للمصنعية<span class="s1">";</span></p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("calcBtn").innerText =</p>
+<p dir="rtl" class="p3"><span class="s1">"</span>احسب<span class="s1"> </span>السعر<span class="s1"> </span>النهائي<span class="s1">";</span></p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("reverseBtn").innerText =</p>
+<p dir="rtl" class="p3"><span class="s1">"</span>احسب<span class="s1"> </span>المصنعية<span class="s1">";</span></p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("langBtn").innerText =</p>
+<p class="p1">"English";</p>
+<p class="p2"><br></p>
+<p class="p1">}else{</p>
+<p class="p2"><br></p>
+<p class="p1">currentLang="en";</p>
+<p class="p2"><br></p>
+<p class="p1">location.reload();</p>
+<p class="p2"><br></p>
 <p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
 <p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
 <p class="p1">&lt;/body&gt;</p>
 <p class="p1">&lt;/html&gt;</p>
 </body>
