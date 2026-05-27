@@ -1,500 +1,258 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Darham Gold</title>
-
 <style>
-
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
-    color:#222;
-}
-
-.container{
-    max-width:500px;
-    margin:auto;
-    padding:20px;
-}
-
-.card{
-    background:white;
-    border-radius:18px;
-    padding:20px;
-    margin-bottom:18px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.08);
-}
-
-h1{
-    text-align:center;
-    color:#b8860b;
-    margin-bottom:5px;
-}
-
-.subtitle{
-    text-align:center;
-    color:#666;
-    margin-bottom:20px;
-}
-
-input,select,button{
-    width:100%;
-    padding:14px;
-    margin-top:10px;
-    border-radius:12px;
-    border:1px solid #ccc;
-    font-size:16px;
-    box-sizing:border-box;
-}
-
-button{
-    background:#b8860b;
-    color:white;
-    border:none;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-button:hover{
-    opacity:0.9;
-}
-
-.priceRow{
-    display:flex;
-    justify-content:space-between;
-    background:#faf3d1;
-    padding:12px;
-    border-radius:12px;
-    margin-top:10px;
-    font-weight:bold;
-}
-
-.result{
-    background:#f3f3f3;
-    padding:15px;
-    border-radius:12px;
-    margin-top:15px;
-    font-weight:bold;
-    text-align:center;
-}
-
-.langBtn{
-    background:#222;
-    margin-bottom:15px;
-}
-
-.small{
-    text-align:center;
-    color:#777;
-    font-size:13px;
-}
-
+body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5;color:#222}
+.container{max-width:520px;margin:auto;padding:20px}
+.card{background:white;border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+h1{text-align:center;color:#b8860b;margin-bottom:5px}
+.subtitle{text-align:center;color:#666;margin-bottom:20px}
+input,select,button{width:100%;padding:14px;margin-top:10px;border-radius:12px;border:1px solid #ccc;font-size:16px;box-sizing:border-box}
+button{background:#b8860b;color:white;border:none;font-weight:bold}
+.langBtn{background:#222}
+.priceRow{display:flex;justify-content:space-between;background:#faf3d1;padding:12px;border-radius:12px;margin-top:10px;font-weight:bold}
+.result{background:#f3f3f3;padding:15px;border-radius:12px;margin-top:15px;font-weight:bold;text-align:center}
+.small{text-align:center;color:#777;font-size:13px}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
-<button class="langBtn" onclick="toggleLanguage()" id="langBtn">
-English
-</button>
+<button class="langBtn" onclick="toggleLanguage()" id="langBtn">English</button>
 
 <h1>Darham Gold</h1>
-
-<div class="subtitle" id="subtitle">
-حاسبة الذهب الإماراتية الكاملة
-</div>
+<div class="subtitle" id="subtitle">حاسبة الذهب الإماراتية الكاملة</div>
 
 <div class="card">
-
 <h3 id="globalTitle">سعر الأونصة العالمي</h3>
 
-<input
-type="number"
-id="ouncePrice"
-placeholder="تحديث السعر العالمي"
-/>
+<input type="number" id="ouncePrice" placeholder="سعر الأونصة بالدولار">
 
-<div class="result" id="status">
-جاهز
-</div>
+<button onclick="fetchGoldPrice()" id="updateBtn">تحديث السعر العالمي</button>
 
-<input
-type="number"
-id="usdRate"
-value="3.6725"
-/>
+<div class="result" id="status">جاهز</div>
 
+<input type="number" id="usdRate" value="3.678" placeholder="سعر الدولار مقابل الدرهم">
 </div>
 
 <div class="card">
-
 <h3 id="gramTitle">أسعار الجرام حسب العيار</h3>
-
-<div id="prices">
-بانتظار الأسعار...
-</div>
-
+<div id="prices">بانتظار الأسعار...</div>
 </div>
 
 <div class="card">
-
 <h3 id="normalTitle">الحساب العادي</h3>
 
-<input
-type="number"
-id="normalWeight"
-placeholder="وزن الذهب بالجرام"
-/>
+<input type="number" id="normalWeight" placeholder="وزن الذهب بالجرام">
 
 <select id="normalKarat">
-
 <option value="24">24</option>
 <option value="22">22</option>
-<option value="21">21</option>
+<option value="21" selected>21</option>
 <option value="18">18</option>
-
 </select>
 
-<input
-type="number"
-id="makingCharge"
-placeholder="المصنعية لكل جرام (اختياري)"
-/>
+<input type="number" id="makingCharge" placeholder="المصنعية لكل جرام اختياري">
 
-<button onclick="calculateNormal()" id="calcBtn">
-احسب السعر النهائي
-</button>
+<button onclick="calculateNormal()" id="calcBtn">احسب السعر النهائي</button>
 
-<div class="result" id="normalResult">
-بانتظار الحساب...
-</div>
-
+<div class="result" id="normalResult">بانتظار الحساب...</div>
 </div>
 
 <div class="card">
-
 <h3 id="reverseTitle">الحساب العكسي للمصنعية</h3>
 
-<input
-type="number"
-id="reverseWeight"
-placeholder="وزن الذهب بالجرام"
-/>
+<input type="number" id="reverseWeight" placeholder="وزن الذهب بالجرام">
 
 <select id="reverseKarat">
-
 <option value="24">24</option>
 <option value="22">22</option>
-<option value="21">21</option>
+<option value="21" selected>21</option>
 <option value="18">18</option>
-
 </select>
 
-<input
-type="number"
-id="totalPrice"
-placeholder="السعر الإجمالي شامل الضريبة"
-/>
+<input type="number" id="totalPrice" placeholder="السعر الإجمالي شامل الضريبة">
 
-<button onclick="calculateReverse()" id="reverseBtn">
-احسب المصنعية
-</button>
+<button onclick="calculateReverse()" id="reverseBtn">احسب المصنعية</button>
 
-<div class="result" id="reverseResult">
-بانتظار الحساب...
+<div class="result" id="reverseResult">بانتظار الحساب...</div>
 </div>
 
-</div>
-
-<div class="small">
-5% VAT Included
-</div>
+<div class="small">5% VAT Included</div>
 
 </div>
 
 <script>
-
 let currentLang = "ar";
 
-function toggleLanguage(){
+async function fetchGoldPrice(){
+    const status = document.getElementById("status");
 
-    currentLang =
-    currentLang === "ar"
-    ? "en"
-    : "ar";
+    status.innerHTML = currentLang === "ar"
+    ? "جاري تحديث السعر..."
+    : "Updating price...";
 
-    document.documentElement.lang =
-    currentLang;
+    try{
+        const response = await fetch("https://api.gold-api.com/price/XAU");
 
-    document.documentElement.dir =
-    currentLang === "ar"
-    ? "rtl"
-    : "ltr";
+        if(!response.ok){
+            throw new Error("API error");
+        }
 
-    if(currentLang === "ar"){
+        const data = await response.json();
 
-        document.getElementById("langBtn").innerHTML =
-        "English";
+        if(!data.price){
+            throw new Error("No price");
+        }
 
-        document.getElementById("subtitle").innerHTML =
-        "حاسبة الذهب الإماراتية الكاملة";
+        document.getElementById("ouncePrice").value =
+        Number(data.price).toFixed(2);
 
-        document.getElementById("globalTitle").innerHTML =
-        "سعر الأونصة العالمي";
+        status.innerHTML = currentLang === "ar"
+        ? "تم تحديث السعر العالمي بنجاح"
+        : "Global price updated successfully";
 
-        document.getElementById("gramTitle").innerHTML =
-        "أسعار الجرام حسب العيار";
+        updatePrices();
 
-        document.getElementById("normalTitle").innerHTML =
-        "الحساب العادي";
-
-        document.getElementById("reverseTitle").innerHTML =
-        "الحساب العكسي للمصنعية";
-
-        document.getElementById("calcBtn").innerHTML =
-        "احسب السعر النهائي";
-
-        document.getElementById("reverseBtn").innerHTML =
-        "احسب المصنعية";
-
-    }else{
-
-        document.getElementById("langBtn").innerHTML =
-        "العربية";
-
-        document.getElementById("subtitle").innerHTML =
-        "UAE Gold Calculator";
-
-        document.getElementById("globalTitle").innerHTML =
-        "Global Gold Ounce Price";
-
-        document.getElementById("gramTitle").innerHTML =
-        "Gram Prices by Karat";
-
-        document.getElementById("normalTitle").innerHTML =
-        "Normal Calculation";
-
-        document.getElementById("reverseTitle").innerHTML =
-        "Reverse Making Charge";
-
-        document.getElementById("calcBtn").innerHTML =
-        "Calculate Final Price";
-
-        document.getElementById("reverseBtn").innerHTML =
-        "Calculate Making Charge";
+    }catch(error){
+        status.innerHTML = currentLang === "ar"
+        ? "تعذر التحديث التلقائي، أدخل السعر يدويًا"
+        : "Auto update failed, enter price manually";
     }
-
-    updatePrices();
 }
 
 function gramPrice(karat){
+    let ounce = parseFloat(document.getElementById("ouncePrice").value);
+    let usd = parseFloat(document.getElementById("usdRate").value);
 
-    let ounce =
-    parseFloat(
-    document.getElementById("ouncePrice").value
-    );
+    if(!ounce || !usd){ return 0; }
 
-    let usd =
-    parseFloat(
-    document.getElementById("usdRate").value
-    );
-
-    if(!ounce || !usd){
-        return 0;
-    }
-
-    let gram24 =
-    (ounce / 31.1035) * usd;
-
+    let gram24 = (ounce / 31.1035) * usd;
     return gram24 * (karat / 24);
 }
 
 function updatePrices(){
-
     let html = "";
 
     [24,22,21,18].forEach(function(k){
-
-        let price =
-        gramPrice(k);
+        let price = gramPrice(k);
 
         if(price > 0){
-
             html += `
             <div class="priceRow">
-            <span>${k}K</span>
-            <span>${price.toFixed(2)} AED</span>
-            </div>
-            `;
+                <span>${k}K</span>
+                <span>${price.toFixed(2)} ${currentLang === "ar" ? "درهم" : "AED"}</span>
+            </div>`;
         }
-
     });
 
-    if(html === ""){
-
-        html =
-        currentLang === "ar"
-        ? "بانتظار الأسعار..."
-        : "Waiting for prices...";
-    }
-
     document.getElementById("prices").innerHTML =
-    html;
+    html || (currentLang === "ar" ? "بانتظار الأسعار..." : "Waiting for prices...");
 }
 
 function calculateNormal(){
+    let weight = parseFloat(document.getElementById("normalWeight").value);
+    let making = parseFloat(document.getElementById("makingCharge").value) || 0;
+    let karat = parseFloat(document.getElementById("normalKarat").value);
 
-    let weight =
-    parseFloat(
-    document.getElementById("normalWeight").value
-    );
-
-    let making =
-    parseFloat(
-    document.getElementById("makingCharge").value
-    ) || 0;
-
-    let karat =
-    parseFloat(
-    document.getElementById("normalKarat").value
-    );
-
-    if(!weight || weight <= 0){
-
+    if(!weight || weight <= 0 || gramPrice(karat) <= 0){
         document.getElementById("normalResult").innerHTML =
         currentLang === "ar"
-        ? "يرجى إدخال الوزن"
-        : "Please enter weight";
-
+        ? "يرجى إدخال الوزن وسعر الأونصة"
+        : "Please enter weight and ounce price";
         return;
     }
 
-    let gram =
-    gramPrice(karat);
-
-    let subtotal =
-    (gram + making) * weight;
-
-    let total =
-    subtotal * 1.05;
+    let gram = gramPrice(karat);
+    let goldValue = gram * weight;
+    let subtotal = (gram + making) * weight;
+    let total = subtotal * 1.05;
 
     document.getElementById("normalResult").innerHTML =
-
     currentLang === "ar"
-
-    ?
-
-    `
-    سعر الذهب:
-    ${ (gram * weight).toFixed(2) } درهم<br><br>
-
-    السعر قبل الضريبة:
-    ${ subtotal.toFixed(2) } درهم<br><br>
-
-    السعر النهائي شامل الضريبة:
-    ${ total.toFixed(2) } درهم
-    `
-
-    :
-
-    `
-    Gold Price:
-    ${ (gram * weight).toFixed(2) } AED<br><br>
-
-    Before VAT:
-    ${ subtotal.toFixed(2) } AED<br><br>
-
-    Final Price:
-    ${ total.toFixed(2) } AED
-    `;
+    ? `قيمة الذهب: ${goldValue.toFixed(2)} درهم<br><br>
+       السعر قبل الضريبة: ${subtotal.toFixed(2)} درهم<br><br>
+       السعر النهائي شامل الضريبة: ${total.toFixed(2)} درهم`
+    : `Gold Value: ${goldValue.toFixed(2)} AED<br><br>
+       Before VAT: ${subtotal.toFixed(2)} AED<br><br>
+       Final Price Including VAT: ${total.toFixed(2)} AED`;
 }
 
 function calculateReverse(){
+    let weight = parseFloat(document.getElementById("reverseWeight").value);
+    let karat = parseFloat(document.getElementById("reverseKarat").value);
+    let total = parseFloat(document.getElementById("totalPrice").value);
 
-    let weight =
-    parseFloat(
-    document.getElementById("reverseWeight").value
-    );
-
-    let karat =
-    parseFloat(
-    document.getElementById("reverseKarat").value
-    );
-
-    let total =
-    parseFloat(
-    document.getElementById("totalPrice").value
-    );
-
-    if(!weight || weight <= 0 || !total || total <= 0){
-
+    if(!weight || weight <= 0 || !total || total <= 0 || gramPrice(karat) <= 0){
         document.getElementById("reverseResult").innerHTML =
         currentLang === "ar"
-        ? "يرجى إدخال الوزن والسعر بشكل صحيح"
-        : "Please enter valid values";
-
+        ? "يرجى إدخال الوزن والسعر وسعر الأونصة"
+        : "Please enter weight, total price and ounce price";
         return;
     }
 
-    let goldGram =
-    gramPrice(karat);
-
-    let totalBeforeVAT =
-    total / 1.05;
-
-    let goldValue =
-    goldGram * weight;
-
-    let makingTotal =
-    totalBeforeVAT - goldValue;
-
-    let makingPerGram =
-    makingTotal / weight;
+    let goldGram = gramPrice(karat);
+    let totalBeforeVAT = total / 1.05;
+    let goldValue = goldGram * weight;
+    let makingTotal = totalBeforeVAT - goldValue;
+    let makingPerGram = makingTotal / weight;
 
     document.getElementById("reverseResult").innerHTML =
-
     currentLang === "ar"
-
-    ?
-
-    `
-    قيمة الذهب:
-    ${ goldValue.toFixed(2) } درهم<br><br>
-
-    إجمالي المصنعية:
-    ${ makingTotal.toFixed(2) } درهم<br><br>
-
-    المصنعية لكل جرام:
-    ${ makingPerGram.toFixed(2) } درهم
-    `
-
-    :
-
-    `
-    Gold Value:
-    ${ goldValue.toFixed(2) } AED<br><br>
-
-    Total Making:
-    ${ makingTotal.toFixed(2) } AED<br><br>
-
-    Making per Gram:
-    ${ makingPerGram.toFixed(2) } AED
-    `;
+    ? `قيمة الذهب: ${goldValue.toFixed(2)} درهم<br><br>
+       السعر قبل الضريبة: ${totalBeforeVAT.toFixed(2)} درهم<br><br>
+       إجمالي المصنعية: ${makingTotal.toFixed(2)} درهم<br><br>
+       المصنعية لكل جرام: ${makingPerGram.toFixed(2)} درهم`
+    : `Gold Value: ${goldValue.toFixed(2)} AED<br><br>
+       Before VAT: ${totalBeforeVAT.toFixed(2)} AED<br><br>
+       Total Making: ${makingTotal.toFixed(2)} AED<br><br>
+       Making per Gram: ${makingPerGram.toFixed(2)} AED`;
 }
 
-document.getElementById("ouncePrice")
-.addEventListener("input", updatePrices);
+function toggleLanguage(){
+    currentLang = currentLang === "ar" ? "en" : "ar";
 
-document.getElementById("usdRate")
-.addEventListener("input", updatePrices);
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
 
+    document.getElementById("langBtn").innerHTML =
+    currentLang === "ar" ? "English" : "العربية";
+
+    document.getElementById("subtitle").innerHTML =
+    currentLang === "ar" ? "حاسبة الذهب الإماراتية الكاملة" : "UAE Gold Calculator";
+
+    document.getElementById("globalTitle").innerHTML =
+    currentLang === "ar" ? "سعر الأونصة العالمي" : "Global Gold Ounce Price";
+
+    document.getElementById("updateBtn").innerHTML =
+    currentLang === "ar" ? "تحديث السعر العالمي" : "Update Global Price";
+
+    document.getElementById("gramTitle").innerHTML =
+    currentLang === "ar" ? "أسعار الجرام حسب العيار" : "Gram Prices by Karat";
+
+    document.getElementById("normalTitle").innerHTML =
+    currentLang === "ar" ? "الحساب العادي" : "Normal Calculation";
+
+    document.getElementById("reverseTitle").innerHTML =
+    currentLang === "ar" ? "الحساب العكسي للمصنعية" : "Reverse Making Charge";
+
+    document.getElementById("calcBtn").innerHTML =
+    currentLang === "ar" ? "احسب السعر النهائي" : "Calculate Final Price";
+
+    document.getElementById("reverseBtn").innerHTML =
+    currentLang === "ar" ? "احسب المصنعية" : "Calculate Making Charge";
+
+    updatePrices();
+}
+
+document.getElementById("ouncePrice").addEventListener("input", updatePrices);
+document.getElementById("usdRate").addEventListener("input", updatePrices);
+
+fetchGoldPrice();
 </script>
 
 </body>
